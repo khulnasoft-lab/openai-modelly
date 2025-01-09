@@ -1,0 +1,8 @@
+openai>=1.58.1
+modelly>=1.0.0
+numpy
+pydub
+modelly_webrtc[vad]
+python-dotenv
+twilio
+numba==0.60.0
