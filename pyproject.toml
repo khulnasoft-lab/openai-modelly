@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "openai-modelly"
+version = "0.0.5"
+description = "A Python package for creating Modelly applications with OpenAI models"
+authors = [
+    { name = "Md Sulaiman", email = "dev.sulaiman@icloud.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "openai>=1.58.1",
+    "modelly>=1.0.0",
+    "numpy",
+    "pydub",
+    "modelly_webrtc[vad]",
+    "python-dotenv",
+    "twilio",
+    "numba==0.60.0",
+]
+
+[project.urls]
+homepage = "https://github.com/khulnasoft-lab/openai-modelly"
+repository = "https://github.com/khulnasoft-lab/openai-modelly"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["openai_modelly"]
